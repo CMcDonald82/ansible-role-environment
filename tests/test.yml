@@ -9,12 +9,12 @@
 
   tasks:
     - name: Echo env vars
-      shell: echo $TEST_VAR
-      register: echo_env_vars
+      command: echo '$TEST_VAR'
+      register: command_result
 
     - name: Log env vars
       debug:
-        msg: "{{ echo_env_vars }}"
+        msg: command result is {{ command_result }}
 
   roles:
     - role_under_test
