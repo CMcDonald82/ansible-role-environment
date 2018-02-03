@@ -1,0 +1,11 @@
+---
+
+- hosts: localhost
+  remote_user: root
+  become: yes
+  vars: 
+    environment_vars:
+      TEST_VAR: test
+
+  roles:
+    - role_under_test
