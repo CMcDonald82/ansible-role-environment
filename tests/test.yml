@@ -6,8 +6,6 @@
   vars: 
     environment_vars:
       TEST_VAR: test
-  environment:
-    EXAMPLE: example
 
   tasks:
     - name: Echo env vars
@@ -18,6 +16,7 @@
     - name: Log env vars
       debug:
         msg: command result is {{ command_result.stdout }} #"{{ ansible_env.TEST_VAR }}" 
-
+      when: command_result.stdout.find(TEST_VAR) != -1
+      
   roles:
     - role_under_test
