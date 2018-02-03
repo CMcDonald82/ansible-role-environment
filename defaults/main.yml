@@ -1,0 +1,4 @@
+---
+
+environment_file: /etc/environment
+environment_vars: {}
