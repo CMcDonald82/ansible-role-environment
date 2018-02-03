@@ -3,8 +3,8 @@
 - name: Environment | Ensure environment file exists
   file:
     path: "{{ environment_file }}"
-    owner: "{{ environment_file_owner }}"
-    group: "{{ environment_file_group }}"
+    # owner: "{{ environment_file_owner }}"
+    # group: "{{ environment_file_group }}"
     state: touch
   register: environment_file_result
   changed_when: environment_file_result.diff.before.state != "file"
