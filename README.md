@@ -1,6 +1,8 @@
 # ansible-role-environment
-Ansible role for configuring environment variables on an Ubuntu server
 
+[![Build Status](https://travis-ci.org/CMcDonald82/ansible-role-environment.svg?branch=master)](https://travis-ci.org/CMcDonald82/ansible-role-environment)
+
+Ansible role for configuring environment variables on an Ubuntu server
 
 This role adds environment variables to /etc/environment
 
