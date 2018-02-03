@@ -6,10 +6,12 @@
   vars: 
     environment_vars:
       TEST_VAR: test
+  environment:
+    EXAMPLE: example
 
   tasks:
     - name: Echo env vars
-      shell: echo '$TEST_VAR'
+      shell: echo '$EXAMPLE'
       register: command_result
 
     - name: Log env vars
