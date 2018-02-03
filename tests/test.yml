@@ -16,11 +16,11 @@
 
     - name: Log env vars
       debug:
-        msg: "Found {{ item }}"
+        msg: "command result is {{ command_result.stdout }}"  
       when: command_result.stdout.find(item) != -1
       with_items:
         - TEST_VAR
-        - PATH
+        - PATH='example/path'
 
   roles:
     - role_under_test
