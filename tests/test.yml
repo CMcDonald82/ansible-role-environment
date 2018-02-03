@@ -16,7 +16,7 @@
 
     - name: Log env vars
       debug:
-        msg: command result is {{ command_result.stdout }}
+        msg: "{{ ansible_env.TEST_VAR }}" #command result is {{ command_result.stdout }}
 
   roles:
     - role_under_test
