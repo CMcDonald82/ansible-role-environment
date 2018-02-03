@@ -9,13 +9,13 @@
 
   tasks:
     - name: Echo env vars
-      shell: cat /etc/environment #echo '$EXAMPLE'
+      shell: cat /etc/environment 
       changed_when: false
       register: command_result
 
     - name: Log env vars
       debug:
-        msg: command result is {{ command_result.stdout }} #"{{ ansible_env.TEST_VAR }}" 
+        msg: "Found {{ item }}"
       when: command_result.stdout.find(item) != -1
       with_items:
         - TEST_VAR
