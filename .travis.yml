@@ -24,4 +24,4 @@ script:
   - ${PWD}/tests/test.sh
 
   # Test variable
-  - 'docker exec --tty ${container_id} env TERM=xterm bash -c echo "$TEST_VAR"'
+  - docker exec ${container_id} bash -c 'echo "$TEST_VAR"'
