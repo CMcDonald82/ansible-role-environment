@@ -11,12 +11,13 @@
 
   tasks:
     - name: Echo env vars
-      shell: echo '$EXAMPLE'
+      shell: cat /etc/environment #echo '$EXAMPLE'
+      changed_when: false
       register: command_result
 
     - name: Log env vars
       debug:
-        msg: "{{ ansible_env.TEST_VAR }}" #command result is {{ command_result.stdout }}
+        msg: command result is {{ command_result.stdout }} #"{{ ansible_env.TEST_VAR }}" 
 
   roles:
     - role_under_test
