@@ -22,6 +22,3 @@ script:
 
   # Run tests
   - ${PWD}/tests/test.sh
-
-  # Test variable
-  - docker exec ${container_id} bash -c 'echo "$TEST_VAR"'
