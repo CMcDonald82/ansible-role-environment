@@ -16,7 +16,9 @@
     - name: Log env vars
       debug:
         msg: command result is {{ command_result.stdout }} #"{{ ansible_env.TEST_VAR }}" 
-      when: command_result.stdout.find(TEST_VAR) != -1
-      
+      when: command_result.stdout.find(item) != -1
+      with_items:
+        - TEST_VAR
+
   roles:
     - role_under_test
