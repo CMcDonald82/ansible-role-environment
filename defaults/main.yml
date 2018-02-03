@@ -1,6 +1,4 @@
 ---
 
 environment_file: /etc/environment
-# environment_file_owner: root
-# environment_file_group: root
 environment_vars: {}

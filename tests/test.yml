@@ -6,6 +6,7 @@
   vars: 
     environment_vars:
       TEST_VAR: test
+      PATH: example/path
 
   tasks:
     - name: Echo env vars
@@ -19,6 +20,7 @@
       when: command_result.stdout.find(item) != -1
       with_items:
         - TEST_VAR
+        - PATH
 
   roles:
     - role_under_test
