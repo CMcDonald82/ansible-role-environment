@@ -7,5 +7,14 @@
     environment_vars:
       TEST_VAR: test
 
+  tasks:
+    - name: Echo env vars
+      command: echo "$TEST_VAR"
+      register: echo_env_vars
+
+    - name: Log env vars
+      debug:
+        msg: "{{ echo_env_vars }}"
+
   roles:
     - role_under_test
