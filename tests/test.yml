@@ -9,7 +9,7 @@
 
   tasks:
     - name: Echo env vars
-      command: echo "$TEST_VAR"
+      shell: echo $TEST_VAR
       register: echo_env_vars
 
     - name: Log env vars
