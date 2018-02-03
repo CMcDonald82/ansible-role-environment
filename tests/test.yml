@@ -14,7 +14,7 @@
 
     - name: Log env vars
       debug:
-        msg: command result is {{ command_result }}
+        msg: command result is {{ command_result.stdout }}
 
   roles:
     - role_under_test
