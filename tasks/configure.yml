@@ -14,3 +14,4 @@
     line: "{{ item.key }}='{{ item.value }}'"
     state: present
   with_dict: "{{ environment_vars }}"
+  no_log: true
